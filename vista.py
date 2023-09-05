@@ -14,7 +14,7 @@ class Vista(QMainWindow):
         self.ui.bt_consultar.clicked.connect(self.show_page_base_datos)
         self.ui.bt_registrar.clicked.connect(self.show_page_registrar)
         self.ui.bt_actualizar.clicked.connect(self.show_page_actualizar)
-        self.ui.bt_eliminar.clicked.connect(self.show_page_eliminar)
+        self.ui.bt_elimanas.clicked.connect(self.show_page_eliminar)
         self.ui.bt_chat.clicked.connect(self.show_page_chat)
 
         # Conectar el botón de búsqueda y la entrada de texto para buscar
@@ -177,7 +177,7 @@ class Vista(QMainWindow):
                 eliminar_usuario(id_usuario_a_eliminar)
                 self.mostrar_mensaje("Usuario eliminado exitosamente.", "Eliminación Exitosa")
                 # Limpiar el campo de ID después de la eliminación
-                self.ui.lineEdit_eliminarid.setText()
+                self.ui.lineEdit_eliminarid.setText("")
 
                 # Actualizar la tabla de usuarios después de la eliminación
                 self.obtener_y_mostrar_usuarios()
